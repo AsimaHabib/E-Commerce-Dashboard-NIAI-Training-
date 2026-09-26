@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Visualization: Real-World Scenarios</title>
+<meta name="description" content="Seven real-world scenarios, each answered with the right chart. Python, Matplotlib, Seaborn and Plotly.">
+<style>
+:root{--bg:#f6f8fb;--ink:#14213d;--muted:#52607a;--line:#d8dfea;--mark:#ffb703;--panel:#fff;--link:#1d4ed8}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1524;--ink:#eaf0fa;--muted:#a4b1c8;--line:#26334d;--panel:#16203a;--link:#8ab4ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--link)}
+.hero{padding:72px 24px 56px;border-bottom:1px solid var(--line);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:32px 32px}
+.wrap{max-width:1040px;margin:0 auto}
+h1{font:700 clamp(2.2rem,6vw,4rem)/1.05 Georgia,"Times New Roman",serif;margin:0 0 16px;max-width:14ch}
+.hero p{max-width:52ch;color:var(--muted);margin:0 0 24px}
+.btns a{display:inline-block;padding:10px 18px;border-radius:6px;font-weight:600;text-decoration:none;margin:0 8px 8px 0;border:2px solid var(--ink);color:var(--ink)}
+.btns a:first-child{background:var(--mark);border-color:var(--mark);color:#14213d}
+.stack{margin:8px 0 0;font-size:.9rem;color:var(--muted)}
+main{padding:24px}
+.task{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;padding:40px 0;border-bottom:1px solid var(--line)}
+.task img,.task iframe{width:100%;border-radius:6px;border:1px solid var(--line);background:#fff}
+.task iframe{height:460px}
+.wide{grid-template-columns:1fr 1.3fr}
+h3{font:700 1.5rem/1.2 Georgia,serif;margin:0 0 4px}
+.type{font-size:.9rem;color:var(--muted);margin:0 0 12px}
+.sowhat{border-left:6px solid var(--mark);padding:6px 0 6px 14px;font-weight:600}
+h2{font:700 1.8rem/1.2 Georgia,serif;margin:48px 0 12px}
+ul{padding-left:20px;max-width:70ch}
+pre{background:var(--panel);border:1px solid var(--line);padding:16px;border-radius:6px;overflow-x:auto;font-size:.9rem}
+footer{padding:32px 24px;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+@media(max-width:800px){.task,.wide{grid-template-columns:1fr;gap:16px}.task iframe{height:380px}}
+a:focus-visible{outline:3px solid var(--mark);outline-offset:2px}
+</style></head><body>
+<header class="hero"><div class="wrap">
+<h1>Every chart starts with a question.</h1>
+<p>Seven real-world scenarios, from a coffee shop to a startup pitch. Each one is solved by choosing the right chart first, then stating the insight in one sentence.</p>
+<div class="btns"><a href="https://github.com/AsimaHabib/E-Commerce-Dashboard-NIAI-Training-/upload">View on GitHub</a><a href="#tasks">See the charts</a></div>
+<p class="stack">Python, pandas, Matplotlib, Seaborn, Plotly</p>
+</div></header>
+<main class="wrap" id="tasks">
+<article class="task"><img src="assets/task1_coffee_shop.png" alt="Coffee shop: which days are busiest?" loading="lazy"><div><h3>Coffee shop: which days are busiest?</h3><p class="type">Chart: Bar chart, highlighted</p><p>A small shop wants to schedule staff. Comparing categories calls for a bar chart, and two orange bars make the peak days impossible to miss.</p><p class="sowhat">Saturday and Sunday sell up to twice as much as weekdays, so add staff on weekends.</p></div></article>
+<article class="task"><img src="assets/task2_fitness_tracker.png" alt="Fitness tracker: did I hit 8,000 steps?" loading="lazy"><div><h3>Fitness tracker: did I hit 8,000 steps?</h3><p class="type">Chart: Line plot with goal line</p><p>Steps change over time, so a line fits. A dashed goal line turns "how am I doing?" into a glance.</p><p class="sowhat">The goal was missed on Monday, Wednesday, Saturday and Sunday. Weekends are the weak spot.</p></div></article>
+<article class="task"><img src="assets/task3_streaming_report.png" alt="Streaming report: pie vs bar" loading="lazy"><div><h3>Streaming report: pie vs bar</h3><p class="type">Chart: Pie chart vs sorted bar</p><p>Six genres with similar values. The pie makes you compare angles; the sorted bar lets you compare lengths from one baseline.</p><p class="sowhat">Drama is #1. The bar chart shows it instantly; the pie hides it.</p></div></article>
+<article class="task"><img src="assets/task4_study_vs_score.png" alt="Does studying help?" loading="lazy"><div><h3>Does studying help?</h3><p class="type">Chart: Scatter plot with trend line</p><p>Two numeric variables call for a scatter plot. Seaborn's regplot adds the trend line.</p><p class="sowhat">The relationship is strongly positive: more study hours go with higher scores.</p></div></article>
+<article class="task"><img src="assets/task5_restaurant_tips.png" alt="Restaurant manager: when do people tip best?" loading="lazy"><div><h3>Restaurant manager: when do people tip best?</h3><p class="type">Chart: Heatmap</p><p>Average tip by day and meal time, built from Seaborn's built-in tips dataset. Colour intensity makes the best slot obvious.</p><p class="sowhat">Sunday dinner has the highest average tip (about $3.26). Put your best servers there.</p></div></article>
+<article class="task wide"><div><h3>Startup pitch: wealth and health over time</h3><p class="type">Chart: interactive animated Plotly scatter</p><p>Built for investors who want to hover and explore. Press play to watch life expectancy and income (log scale) change from 1952 to 2007. Bubble size is population.</p><p class="sowhat">Countries drift up and to the right: richer and longer-lived over the decades.</p></div><iframe src="assets/task6_gapminder.html" title="Gapminder animated scatter" loading="lazy"></iframe></article>
+<article class="task"><img src="assets/task7_ecommerce_dashboard.png" alt="Capstone: e-commerce dashboard" loading="lazy"><div><h3>Capstone: e-commerce dashboard</h3><p class="type">Chart: 2×2 dashboard: line, bar, scatter, pie</p><p>One question per panel and one chart type per question: trend, comparison, relationship and share of total.</p><p class="sowhat">Saturday is the peak for orders and revenue, and revenue rises with orders. Electronics brings in about 40% of revenue.</p></div></article>
+
+<h2>What I learned</h2>
+<ul>
+<li>The question points to the chart: trends need lines, comparisons need bars, relationships need scatter plots.</li>
+<li>Sorted bars beat pies because people judge length along a baseline better than angles.</li>
+<li>Bar charts must start at zero. Line plots can zoom in, because the slope and the gap to a target matter more.</li>
+<li>Pie charts are acceptable for part-to-whole with only a few categories and clear differences.</li>
+</ul>
+
+</main>
+<footer><div class="wrap">Built by @Ashii.</div></footer>
+</body></html>
